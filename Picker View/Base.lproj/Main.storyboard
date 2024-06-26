@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Picker_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35q-eY-jbW">
+                                <rect key="frame" x="20" y="50" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a range for guessing game " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juq-AZ-HY3">
+                                <rect key="frame" x="20" y="80" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ6-3W-8ur">
+                                <rect key="frame" x="20" y="230.5" width="335" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2n-pl-qBa">
+                                <rect key="frame" x="20" y="484.5" width="335" height="31"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.67843137249999996" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter !! ">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enterBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vOd-MY-Ejm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35q-eY-jbW" secondAttribute="trailing" constant="20" id="0DZ-5I-HSn"/>
+                            <constraint firstItem="v2n-pl-qBa" firstAttribute="leading" secondItem="juq-AZ-HY3" secondAttribute="leading" id="IML-33-k2f"/>
+                            <constraint firstItem="juq-AZ-HY3" firstAttribute="top" secondItem="35q-eY-jbW" secondAttribute="bottom" constant="30" id="JBK-qi-eSZ"/>
+                            <constraint firstItem="QQ6-3W-8ur" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jfx-Qk-dMp"/>
+                            <constraint firstItem="juq-AZ-HY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KTi-Je-WEy"/>
+                            <constraint firstItem="35q-eY-jbW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="PvX-y1-yo8"/>
+                            <constraint firstItem="35q-eY-jbW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SfK-dn-coT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="juq-AZ-HY3" secondAttribute="trailing" constant="20" id="Tgc-qe-XAX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v2n-pl-qBa" secondAttribute="bottom" constant="151.5" id="dgM-Tu-gtK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQ6-3W-8ur" secondAttribute="trailing" constant="20" id="mb1-is-MZe"/>
+                            <constraint firstItem="QQ6-3W-8ur" firstAttribute="top" secondItem="juq-AZ-HY3" secondAttribute="bottom" constant="130" id="vzr-2j-2ic"/>
+                            <constraint firstItem="v2n-pl-qBa" firstAttribute="trailing" secondItem="juq-AZ-HY3" secondAttribute="trailing" id="yaq-xT-Igs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayAction" destination="juq-AZ-HY3" id="fTj-CV-mvq"/>
+                        <outlet property="enterbtn" destination="v2n-pl-qBa" id="7xx-BM-eRK"/>
+                        <outlet property="pickerView" destination="QQ6-3W-8ur" id="ezD-Sg-NkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
